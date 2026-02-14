@@ -1,18 +1,26 @@
 [
   {
     "id": "n1",
-    "title": "欢迎使用共享看板",
-    "content": "每次改完内容，点击右上角导出 notes.json，然后提交到 GitHub。",
-    "tags": ["指南"],
-    "status": "todo",
-    "updatedAt": "2026-02-14T15:00:00.000Z"
+    "title": "共享看板已上线",
+    "content": "GitHub Pages 已发布，可通过对话持续更新。",
+    "tags": ["完成", "Pages"],
+    "status": "done",
+    "updatedAt": "2026-02-14T09:52:00.000Z"
   },
   {
     "id": "n2",
-    "title": "示例任务",
-    "content": "把这个项目发布到 GitHub Pages。",
-    "tags": ["发布", "Pages"],
+    "title": "后续维护约定",
+    "content": "你提需求 -> 我改仓库文件 -> commit -> push -> 页面自动更新。",
+    "tags": ["流程", "自动化"],
     "status": "doing",
-    "updatedAt": "2026-02-14T15:00:00.000Z"
+    "updatedAt": "2026-02-14T09:52:00.000Z"
+  },
+  {
+    "id": "n3",
+    "title": "新增功能候选",
+    "content": "可继续加：置顶、标签筛选、夜间模式、图片附件。",
+    "tags": ["功能", "Roadmap"],
+    "status": "todo",
+    "updatedAt": "2026-02-14T09:52:00.000Z"
   }
 ]

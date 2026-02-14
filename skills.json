@@ -78,5 +78,25 @@
     "usage": "cursor agent --plan --workspace \"/path/to/repo\" \"分析并给出改造计划\"\ncursor agent --print --workspace \"/path/to/repo\" \"实现 xxx 并补测试\"",
     "notes": "已验证可登录使用（talisk@talisk.cn）。",
     "updatedAt": "2026-02-14"
+  },
+  {
+    "name": "moltbot-docker",
+    "slug": "moltbot-docker",
+    "status": "enabled",
+    "category": "DevOps / Docker",
+    "purpose": "Moltbot 的 Docker 部署与运维相关能力。",
+    "usage": "按 SKILL.md 通过自然语言触发，或在 skills/moltbot-docker 查看命令示例。",
+    "notes": "已安装自 ClawHub。",
+    "updatedAt": "2026-02-14"
+  },
+  {
+    "name": "vercel",
+    "slug": "vercel",
+    "status": "enabled",
+    "category": "Deploy / Vercel",
+    "purpose": "Vercel 项目部署与平台操作能力。",
+    "usage": "按 SKILL.md 通过自然语言触发，或在 skills/vercel 查看命令示例。",
+    "notes": "已安装自 ClawHub。",
+    "updatedAt": "2026-02-14"
   }
 ]

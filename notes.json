@@ -1,0 +1,18 @@
+[
+  {
+    "id": "n1",
+    "title": "欢迎使用共享看板",
+    "content": "每次改完内容，点击右上角导出 notes.json，然后提交到 GitHub。",
+    "tags": ["指南"],
+    "status": "todo",
+    "updatedAt": "2026-02-14T15:00:00.000Z"
+  },
+  {
+    "id": "n2",
+    "title": "示例任务",
+    "content": "把这个项目发布到 GitHub Pages。",
+    "tags": ["发布", "Pages"],
+    "status": "doing",
+    "updatedAt": "2026-02-14T15:00:00.000Z"
+  }
+]

@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shared Note Board</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <header>
+    <h1>🗂️ Shared Note Board</h1>
+    <div class="toolbar">
+      <input id="search" type="search" placeholder="搜索标题/内容/标签..." />
+      <button id="addBtn">+ 新建</button>
+      <button id="exportBtn">导出 notes.json</button>
+    </div>
+  </header>
+
+  <main id="board" class="board">
+    <section class="column" data-status="todo">
+      <h2>Todo</h2>
+      <div class="list" id="todoList"></div>
+    </section>
+    <section class="column" data-status="doing">
+      <h2>Doing</h2>
+      <div class="list" id="doingList"></div>
+    </section>
+    <section class="column" data-status="done">
+      <h2>Done</h2>
+      <div class="list" id="doneList"></div>
+    </section>
+  </main>
+
+  <dialog id="noteDialog">
+    <form method="dialog" id="noteForm">
+      <h3 id="dialogTitle">新建便签</h3>
+      <input type="hidden" id="noteId" />
+      <label>标题<input id="title" required maxlength="80" /></label>
+      <label>内容<textarea id="content" rows="5" required></textarea></label>
+      <label>标签（逗号分隔）<input id="tags" placeholder="项目A, 紧急" /></label>
+      <label>状态
+        <select id="status">
+          <option value="todo">Todo</option>
+          <option value="doing">Doing</option>
+          <option value="done">Done</option>
+        </select>
+      </label>
+      <menu>
+        <button value="cancel">取消</button>
+        <button id="saveBtn" value="default">保存</button>
+      </menu>
+    </form>
+  </dialog>
+
+  <script src="./app.js" type="module"></script>
+</body>
+</html>

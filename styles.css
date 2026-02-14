@@ -1,29 +1,69 @@
+:root {
+  --bg: #0b1020;
+  --panel: #121a2b;
+  --card: #182238;
+  --text: #e8eefc;
+  --muted: #9eb0d6;
+  --ok: #2ecc71;
+  --line: #2a3a61;
+}
 * { box-sizing: border-box; }
-body { margin: 0; font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; background:#f6f7fb; color:#1f2937; }
-header { padding: 16px 20px; background: #fff; border-bottom:1px solid #e5e7eb; position: sticky; top:0; z-index:2; }
-h1 { margin:0 0 12px; font-size: 22px; }
-.toolbar { display:flex; gap:8px; flex-wrap: wrap; }
-input, textarea, select, button { font: inherit; }
-button { border:1px solid #d1d5db; background:#fff; padding:8px 12px; border-radius:10px; cursor:pointer; }
-button:hover { background:#f3f4f6; }
-#addBtn { background:#2563eb; color:#fff; border-color:#2563eb; }
-#search { flex:1; min-width:220px; padding:8px 10px; border-radius:10px; border:1px solid #d1d5db; }
-.board { display:grid; gap:14px; grid-template-columns:repeat(3,minmax(240px,1fr)); padding:16px; }
-.column { background:#eef2ff; border-radius:14px; padding:10px; min-height:65vh; }
-.column h2 { margin:6px 8px 10px; font-size:16px; }
-.list { min-height:120px; }
-.card { background:#fff; border:1px solid #e5e7eb; border-radius:12px; padding:10px; margin:8px; box-shadow:0 1px 1px rgba(0,0,0,.03); }
-.card h3 { margin:0 0 8px; font-size:15px; }
-.card p { margin:0 0 8px; font-size:13px; white-space:pre-wrap; }
-.tags { display:flex; flex-wrap:wrap; gap:6px; margin-bottom:8px; }
-.tag { font-size:12px; background:#eff6ff; color:#1d4ed8; border:1px solid #bfdbfe; border-radius:999px; padding:2px 8px; }
-.meta { display:flex; justify-content:space-between; align-items:center; gap:8px; }
-.actions { display:flex; gap:6px; }
-.small { font-size:12px; color:#6b7280; }
-.drag-over { outline:2px dashed #2563eb; outline-offset: -6px; }
-dialog { border:none; border-radius:14px; width:min(520px,92vw); }
-#noteForm { display:grid; gap:8px; }
-#noteForm label { display:grid; gap:4px; font-size:13px; }
-#noteForm input, #noteForm textarea, #noteForm select { border:1px solid #d1d5db; border-radius:8px; padding:8px; }
-menu { display:flex; justify-content:flex-end; gap:8px; padding:0; margin:6px 0 0; }
-@media (max-width: 900px) { .board { grid-template-columns:1fr; } }
+body {
+  margin: 0;
+  font-family: Inter, -apple-system, Segoe UI, Roboto, PingFang SC, Helvetica, Arial, sans-serif;
+  background: linear-gradient(180deg, #0a0f1f, #0d1328);
+  color: var(--text);
+}
+header { padding: 20px; border-bottom: 1px solid var(--line); position: sticky; top: 0; background: #0b1020f2; backdrop-filter: blur(6px); }
+h1 { margin: 0 0 4px; font-size: 24px; }
+.subtitle { margin: 0 0 12px; color: var(--muted); }
+.toolbar { display: flex; gap: 10px; flex-wrap: wrap; }
+input, select, button {
+  background: var(--panel);
+  color: var(--text);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 10px 12px;
+}
+input { min-width: 280px; flex: 1; }
+button { cursor: pointer; }
+.stats { display: grid; grid-template-columns: repeat(auto-fit,minmax(150px,1fr)); gap: 10px; padding: 16px 20px 0; }
+.stat {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 12px;
+}
+.stat .k { color: var(--muted); font-size: 12px; }
+.stat .v { font-size: 22px; font-weight: 700; }
+.grid {
+  padding: 16px 20px 24px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(320px,1fr));
+  gap: 12px;
+}
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 14px;
+}
+.card-head { display: flex; justify-content: space-between; gap: 8px; align-items: center; }
+.name { margin: 0; font-size: 18px; }
+.badge { background: #1f7a47; color: #d9ffe8; border: 1px solid #2fbf6f; border-radius: 999px; padding: 2px 10px; font-size: 12px; }
+.purpose { color: var(--text); opacity: .95; margin: 10px 0; min-height: 44px; }
+.meta { display: flex; justify-content: space-between; color: var(--muted); font-size: 12px; margin-bottom: 10px; }
+.usage-wrap { position: relative; }
+.usage {
+  margin: 0;
+  white-space: pre-wrap;
+  background: #0e1528;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 10px;
+  color: #d9e8ff;
+  max-height: 140px;
+  overflow: auto;
+}
+.copyBtn { position: absolute; right: 8px; top: 8px; font-size: 12px; padding: 4px 8px; }
+.notes { color: var(--muted); font-size: 13px; margin: 10px 0 0; }

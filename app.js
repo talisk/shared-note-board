@@ -1,124 +1,84 @@
-const lists = {
-  todo: document.getElementById('todoList'),
-  doing: document.getElementById('doingList'),
-  done: document.getElementById('doneList')
-};
-
-const dialog = document.getElementById('noteDialog');
-const form = document.getElementById('noteForm');
+const grid = document.getElementById('grid');
+const stats = document.getElementById('stats');
 const searchInput = document.getElementById('search');
-let notes = [];
+const statusFilter = document.getElementById('statusFilter');
+const cardTpl = document.getElementById('cardTpl');
 
-const nowIso = () => new Date().toISOString();
-const uid = () => 'n' + Math.random().toString(36).slice(2, 9);
+let skills = [];
 
-async function loadNotes() {
-  const res = await fetch('./notes.json', { cache: 'no-store' });
-  notes = await res.json();
+async function load() {
+  const res = await fetch('./skills.json', { cache: 'no-store' });
+  skills = await res.json();
   render();
 }
 
-function matchesQuery(note, q) {
+function match(skill, q, st) {
+  const okStatus = st === 'all' || skill.status === st;
+  if (!okStatus) return false;
   if (!q) return true;
-  const hay = [note.title, note.content, ...(note.tags || [])].join(' ').toLowerCase();
+  const hay = [skill.name, skill.slug, skill.purpose, skill.usage, skill.notes, skill.category].join(' ').toLowerCase();
   return hay.includes(q.toLowerCase());
 }
 
 function render() {
   const q = searchInput.value.trim();
-  Object.values(lists).forEach(el => (el.innerHTML = ''));
+  const st = statusFilter.value;
+  const list = skills.filter(s => match(s, q, st));
 
-  notes.filter(n => matchesQuery(n, q)).forEach(note => {
-    const card = document.createElement('article');
-    card.className = 'card';
-    card.draggable = true;
-    card.dataset.id = note.id;
-    card.innerHTML = `
-      <h3>${escapeHtml(note.title)}</h3>
-      <p>${escapeHtml(note.content)}</p>
-      <div class="tags">${(note.tags || []).map(t => `<span class="tag">#${escapeHtml(t)}</span>`).join('')}</div>
-      <div class="meta">
-        <span class="small">${new Date(note.updatedAt).toLocaleString()}</span>
-        <div class="actions">
-          <button data-act="edit">编辑</button>
-          <button data-act="del">删除</button>
-        </div>
-      </div>`;
+  stats.innerHTML = '';
+  const total = skills.length;
+  const enabled = skills.filter(s => s.status === 'enabled').length;
+  const configured = skills.filter(s => s.status === 'configured').length;
+  const ready = skills.filter(s => s.status === 'ready').length;
 
-    card.addEventListener('dragstart', e => e.dataTransfer.setData('text/plain', note.id));
-    card.querySelector('[data-act="edit"]').onclick = () => openDialog(note);
-    card.querySelector('[data-act="del"]').onclick = () => {
-      if (!confirm('确认删除这条便签？')) return;
-      notes = notes.filter(n => n.id !== note.id);
-      render();
+  [
+    ['总数', total],
+    ['已启用', enabled],
+    ['已配置', configured],
+    ['可直接使用', ready],
+    ['筛选结果', list.length],
+  ].forEach(([k, v]) => {
+    const el = document.createElement('div');
+    el.className = 'stat';
+    el.innerHTML = `<div class="k">${k}</div><div class="v">${v}</div>`;
+    stats.appendChild(el);
+  });
+
+  grid.innerHTML = '';
+  list.forEach(skill => {
+    const card = cardTpl.content.firstElementChild.cloneNode(true);
+    card.querySelector('.name').textContent = skill.name;
+    card.querySelector('.badge').textContent = skill.status;
+    card.querySelector('.purpose').textContent = skill.purpose;
+    card.querySelector('.category').textContent = skill.category;
+    card.querySelector('.updatedAt').textContent = `更新: ${skill.updatedAt}`;
+    card.querySelector('.usage').textContent = skill.usage;
+    card.querySelector('.notes').textContent = skill.notes || '';
+
+    card.querySelector('.copyBtn').onclick = async () => {
+      try {
+        await navigator.clipboard.writeText(skill.usage);
+        card.querySelector('.copyBtn').textContent = '已复制';
+        setTimeout(() => (card.querySelector('.copyBtn').textContent = '复制命令'), 1000);
+      } catch {
+        alert('复制失败，请手动复制');
+      }
     };
 
-    lists[note.status]?.appendChild(card);
+    grid.appendChild(card);
   });
 }
 
-function openDialog(note = null) {
-  document.getElementById('dialogTitle').textContent = note ? '编辑便签' : '新建便签';
-  document.getElementById('noteId').value = note?.id || '';
-  document.getElementById('title').value = note?.title || '';
-  document.getElementById('content').value = note?.content || '';
-  document.getElementById('tags').value = (note?.tags || []).join(', ');
-  document.getElementById('status').value = note?.status || 'todo';
-  dialog.showModal();
-}
-
-form.addEventListener('submit', e => {
-  e.preventDefault();
-  const id = document.getElementById('noteId').value || uid();
-  const payload = {
-    id,
-    title: document.getElementById('title').value.trim(),
-    content: document.getElementById('content').value.trim(),
-    tags: document.getElementById('tags').value.split(',').map(s => s.trim()).filter(Boolean),
-    status: document.getElementById('status').value,
-    updatedAt: nowIso()
-  };
-
-  const i = notes.findIndex(n => n.id === id);
-  if (i >= 0) notes[i] = payload;
-  else notes.unshift(payload);
-
-  dialog.close();
-  render();
-});
-
-document.getElementById('addBtn').onclick = () => openDialog();
 searchInput.addEventListener('input', render);
+statusFilter.addEventListener('change', render);
 
 document.getElementById('exportBtn').onclick = () => {
-  const blob = new Blob([JSON.stringify(notes, null, 2)], { type: 'application/json' });
+  const blob = new Blob([JSON.stringify(skills, null, 2)], { type: 'application/json' });
   const a = document.createElement('a');
   a.href = URL.createObjectURL(blob);
-  a.download = 'notes.json';
+  a.download = 'skills.json';
   a.click();
   URL.revokeObjectURL(a.href);
 };
 
-for (const [status, list] of Object.entries(lists)) {
-  list.addEventListener('dragover', e => {
-    e.preventDefault();
-    list.closest('.column').classList.add('drag-over');
-  });
-  list.addEventListener('dragleave', () => list.closest('.column').classList.remove('drag-over'));
-  list.addEventListener('drop', e => {
-    e.preventDefault();
-    list.closest('.column').classList.remove('drag-over');
-    const id = e.dataTransfer.getData('text/plain');
-    const note = notes.find(n => n.id === id);
-    if (!note) return;
-    note.status = status;
-    note.updatedAt = nowIso();
-    render();
-  });
-}
-
-function escapeHtml(str = '') {
-  return str.replace(/[&<>'"]/g, ch => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' }[ch]));
-}
-
-loadNotes();
+load();

@@ -1,0 +1,72 @@
+[
+  {
+    "name": "crypto-gold-monitor",
+    "slug": "crypto-gold-monitor",
+    "status": "enabled",
+    "category": "Crypto / Metals",
+    "purpose": "监控 BTC/ETH 与黄金/白银价格，免费无需 API Key。",
+    "usage": "crypto-monitor all\ncrypto-monitor btc\ncrypto-monitor gold",
+    "notes": "适合快速看盘与提醒场景。",
+    "updatedAt": "2026-02-14"
+  },
+  {
+    "name": "us-stock-analysis",
+    "slug": "us-stock-analysis",
+    "status": "enabled",
+    "category": "US Stocks",
+    "purpose": "美股结构化分析（基本面/技术面/对比/报告）。",
+    "usage": "用户自然语言触发：\n- 分析 AAPL\n- 比较 TSLA vs NVDA",
+    "notes": "依赖 web_search 获取实时数据。",
+    "updatedAt": "2026-02-14"
+  },
+  {
+    "name": "finnhub",
+    "slug": "finnhub",
+    "status": "configured",
+    "category": "Market API",
+    "purpose": "实时行情、公司新闻、财报与市场指标。",
+    "usage": "curl \"https://finnhub.io/api/v1/quote?symbol=AAPL&token=$FINNHUB_API_KEY\"",
+    "notes": "已配置 FINNHUB_API_KEY。",
+    "updatedAt": "2026-02-14"
+  },
+  {
+    "name": "stock-market-pro",
+    "slug": "stock-market-pro",
+    "status": "ready",
+    "category": "Yahoo Finance",
+    "purpose": "专业行情/估值/图表分析（股票、加密、外汇）。",
+    "usage": "uv run --script scripts/yf price AAPL\nuv run --script scripts/yf pro NVDA 6mo",
+    "notes": "依赖 uv，当前环境已可用。",
+    "updatedAt": "2026-02-14"
+  },
+  {
+    "name": "stock-analysis",
+    "slug": "stock-analysis",
+    "status": "ready",
+    "category": "Yahoo Finance",
+    "purpose": "综合股票分析与组合/热点扫描。",
+    "usage": "按 SKILL.md 指南通过自然语言触发。",
+    "notes": "已安装，建议配合 uv 使用。",
+    "updatedAt": "2026-02-14"
+  },
+  {
+    "name": "akshare-market-intel",
+    "slug": "akshare-market-intel",
+    "status": "ready",
+    "category": "CN/HK/US Macro",
+    "purpose": "聚合 A股/港股/美股/黄金/金融新闻（AkShare）。",
+    "usage": "python3 scripts/market_intel.py snapshot\npython3 scripts/market_intel.py a-share --limit 20\npython3 scripts/market_intel.py hk --limit 20",
+    "notes": "我新增的自定义 skill。",
+    "updatedAt": "2026-02-14"
+  },
+  {
+    "name": "volc-ark-multimodal",
+    "slug": "volc-ark-multimodal",
+    "status": "configured",
+    "category": "Multimodal",
+    "purpose": "支持图片生成、图生视频、图片理解与深度推理。",
+    "usage": "python3 scripts/ark_multimodal.py image --prompt \"赛博朋克城市夜景\"\npython3 scripts/ark_multimodal.py video-create --prompt \"...\" --image-url \"https://...\"\npython3 scripts/ark_multimodal.py reason --image-url \"https://...\" --text \"你看见了什么\"",
+    "notes": "已配置 ARK_BASE_URL / ARK_API_KEY / ARK_*_MODEL。",
+    "updatedAt": "2026-02-14"
+  }
+]

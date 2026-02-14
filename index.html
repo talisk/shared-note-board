@@ -3,54 +3,46 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Shared Note Board</title>
+  <title>OpenClaw Skills Panel</title>
   <link rel="stylesheet" href="./styles.css" />
 </head>
 <body>
   <header>
-    <h1>🗂️ Shared Note Board</h1>
+    <h1>🧩 OpenClaw Skills 一览面板</h1>
+    <p class="subtitle">展示已完成配置的 skills（用途 / 用法 / 状态）</p>
     <div class="toolbar">
-      <input id="search" type="search" placeholder="搜索标题/内容/标签..." />
-      <button id="addBtn">+ 新建</button>
-      <button id="exportBtn">导出 notes.json</button>
+      <input id="search" type="search" placeholder="搜索 skill 名称、用途、命令..." />
+      <select id="statusFilter">
+        <option value="all">全部状态</option>
+        <option value="enabled">已启用</option>
+        <option value="configured">已配置</option>
+        <option value="ready">可直接使用</option>
+      </select>
+      <button id="exportBtn">导出 skills.json</button>
     </div>
   </header>
 
-  <main id="board" class="board">
-    <section class="column" data-status="todo">
-      <h2>Todo</h2>
-      <div class="list" id="todoList"></div>
-    </section>
-    <section class="column" data-status="doing">
-      <h2>Doing</h2>
-      <div class="list" id="doingList"></div>
-    </section>
-    <section class="column" data-status="done">
-      <h2>Done</h2>
-      <div class="list" id="doneList"></div>
-    </section>
-  </main>
+  <section class="stats" id="stats"></section>
+  <main id="grid" class="grid"></main>
 
-  <dialog id="noteDialog">
-    <form method="dialog" id="noteForm">
-      <h3 id="dialogTitle">新建便签</h3>
-      <input type="hidden" id="noteId" />
-      <label>标题<input id="title" required maxlength="80" /></label>
-      <label>内容<textarea id="content" rows="5" required></textarea></label>
-      <label>标签（逗号分隔）<input id="tags" placeholder="项目A, 紧急" /></label>
-      <label>状态
-        <select id="status">
-          <option value="todo">Todo</option>
-          <option value="doing">Doing</option>
-          <option value="done">Done</option>
-        </select>
-      </label>
-      <menu>
-        <button value="cancel">取消</button>
-        <button id="saveBtn" value="default">保存</button>
-      </menu>
-    </form>
-  </dialog>
+  <template id="cardTpl">
+    <article class="card">
+      <div class="card-head">
+        <h3 class="name"></h3>
+        <span class="badge"></span>
+      </div>
+      <p class="purpose"></p>
+      <div class="meta">
+        <span class="category"></span>
+        <span class="updatedAt"></span>
+      </div>
+      <div class="usage-wrap">
+        <pre class="usage"></pre>
+        <button class="copyBtn">复制命令</button>
+      </div>
+      <p class="notes"></p>
+    </article>
+  </template>
 
   <script src="./app.js" type="module"></script>
 </body>

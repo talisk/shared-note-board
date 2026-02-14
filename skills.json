@@ -68,5 +68,15 @@
     "usage": "python3 scripts/ark_multimodal.py image --prompt \"赛博朋克城市夜景\"\npython3 scripts/ark_multimodal.py video-create --prompt \"...\" --image-url \"https://...\"\npython3 scripts/ark_multimodal.py reason --image-url \"https://...\" --text \"你看见了什么\"",
     "notes": "已配置 ARK_BASE_URL / ARK_API_KEY / ARK_*_MODEL。",
     "updatedAt": "2026-02-14"
+  },
+  {
+    "name": "cursor-agent",
+    "slug": "cursor-agent",
+    "status": "configured",
+    "category": "Coding Agent",
+    "purpose": "将 Cursor Agent CLI 作为编码子代理使用，用于写代码、重构、调试和方案生成。",
+    "usage": "cursor agent --plan --workspace \"/path/to/repo\" \"分析并给出改造计划\"\ncursor agent --print --workspace \"/path/to/repo\" \"实现 xxx 并补测试\"",
+    "notes": "已验证可登录使用（talisk@talisk.cn）。",
+    "updatedAt": "2026-02-14"
   }
 ]

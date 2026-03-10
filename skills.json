@@ -1,102 +1,1002 @@
 [
   {
-    "name": "crypto-gold-monitor",
-    "slug": "crypto-gold-monitor",
+    "name": "1password",
+    "slug": "1password",
     "status": "enabled",
-    "category": "Crypto / Metals",
-    "purpose": "监控 BTC/ETH 与黄金/白银价格，免费无需 API Key。",
-    "usage": "crypto-monitor all\ncrypto-monitor btc\ncrypto-monitor gold",
-    "notes": "适合快速看盘与提醒场景。",
-    "updatedAt": "2026-02-14"
+    "category": "Built-in Skill",
+    "purpose": "Set up and use 1Password CLI (op). Use when installing the CLI, enabling desktop app integration, signing in (single or multi-account), or r",
+    "usage": "按 SKILL.md 指南通过自然语言触发，或进入该 skill 目录查看详细说明。",
+    "notes": "来自 OpenClaw 内置 skills 目录。",
+    "updatedAt": "2026-03-10"
   },
   {
-    "name": "us-stock-analysis",
-    "slug": "us-stock-analysis",
+    "name": "apple-notes",
+    "slug": "apple-notes",
     "status": "enabled",
-    "category": "US Stocks",
-    "purpose": "美股结构化分析（基本面/技术面/对比/报告）。",
-    "usage": "用户自然语言触发：\n- 分析 AAPL\n- 比较 TSLA vs NVDA",
-    "notes": "依赖 web_search 获取实时数据。",
-    "updatedAt": "2026-02-14"
+    "category": "Built-in Skill",
+    "purpose": "Manage Apple Notes via the memo CLI on macOS (create, view, edit, delete, search, move, and export notes). Use when a user asks OpenClaw to ",
+    "usage": "按 SKILL.md 指南通过自然语言触发，或进入该 skill 目录查看详细说明。",
+    "notes": "来自 OpenClaw 内置 skills 目录。",
+    "updatedAt": "2026-03-10"
   },
   {
-    "name": "finnhub",
-    "slug": "finnhub",
-    "status": "configured",
-    "category": "Market API",
-    "purpose": "实时行情、公司新闻、财报与市场指标。",
-    "usage": "curl \"https://finnhub.io/api/v1/quote?symbol=AAPL&token=$FINNHUB_API_KEY\"",
-    "notes": "已配置 FINNHUB_API_KEY。",
-    "updatedAt": "2026-02-14"
+    "name": "apple-reminders",
+    "slug": "apple-reminders",
+    "status": "enabled",
+    "category": "Built-in Skill",
+    "purpose": "Manage Apple Reminders via remindctl CLI (list, add, edit, complete, delete). Supports lists, date filters, and JSON/plain output.",
+    "usage": "按 SKILL.md 指南通过自然语言触发，或进入该 skill 目录查看详细说明。",
+    "notes": "来自 OpenClaw 内置 skills 目录。",
+    "updatedAt": "2026-03-10"
   },
   {
-    "name": "stock-market-pro",
-    "slug": "stock-market-pro",
+    "name": "bear-notes",
+    "slug": "bear-notes",
+    "status": "enabled",
+    "category": "Built-in Skill",
+    "purpose": "Create, search, and manage Bear notes via grizzly CLI.",
+    "usage": "按 SKILL.md 指南通过自然语言触发，或进入该 skill 目录查看详细说明。",
+    "notes": "来自 OpenClaw 内置 skills 目录。",
+    "updatedAt": "2026-03-10"
+  },
+  {
+    "name": "blogwatcher",
+    "slug": "blogwatcher",
+    "status": "enabled",
+    "category": "Built-in Skill",
+    "purpose": "Monitor blogs and RSS/Atom feeds for updates using the blogwatcher CLI.",
+    "usage": "按 SKILL.md 指南通过自然语言触发，或进入该 skill 目录查看详细说明。",
+    "notes": "来自 OpenClaw 内置 skills 目录。",
+    "updatedAt": "2026-03-10"
+  },
+  {
+    "name": "blucli",
+    "slug": "blucli",
+    "status": "enabled",
+    "category": "Built-in Skill",
+    "purpose": "BluOS CLI (blu) for discovery, playback, grouping, and volume.",
+    "usage": "按 SKILL.md 指南通过自然语言触发，或进入该 skill 目录查看详细说明。",
+    "notes": "来自 OpenClaw 内置 skills 目录。",
+    "updatedAt": "2026-03-10"
+  },
+  {
+    "name": "bluebubbles",
+    "slug": "bluebubbles",
+    "status": "enabled",
+    "category": "Built-in Skill",
+    "purpose": "Use when you need to send or manage iMessages via BlueBubbles (recommended iMessage integration). Calls go through the generic message tool ",
+    "usage": "按 SKILL.md 指南通过自然语言触发，或进入该 skill 目录查看详细说明。",
+    "notes": "来自 OpenClaw 内置 skills 目录。",
+    "updatedAt": "2026-03-10"
+  },
+  {
+    "name": "camsnap",
+    "slug": "camsnap",
+    "status": "enabled",
+    "category": "Built-in Skill",
+    "purpose": "Capture frames or clips from RTSP/ONVIF cameras.",
+    "usage": "按 SKILL.md 指南通过自然语言触发，或进入该 skill 目录查看详细说明。",
+    "notes": "来自 OpenClaw 内置 skills 目录。",
+    "updatedAt": "2026-03-10"
+  },
+  {
+    "name": "canvas",
+    "slug": "canvas",
+    "status": "enabled",
+    "category": "Built-in Skill",
+    "purpose": "Display HTML content on connected OpenClaw nodes (Mac app, iOS, Android).",
+    "usage": "按 SKILL.md 指南通过自然语言触发，或进入该 skill 目录查看详细说明。",
+    "notes": "来自 OpenClaw 内置 skills 目录。",
+    "updatedAt": "2026-03-10"
+  },
+  {
+    "name": "clawhub",
+    "slug": "clawhub",
+    "status": "enabled",
+    "category": "Built-in Skill",
+    "purpose": "Use the ClawHub CLI to search, install, update, and publish agent skills from clawhub.com. Use when you need to fetch new skills on the fly,",
+    "usage": "按 SKILL.md 指南通过自然语言触发，或进入该 skill 目录查看详细说明。",
+    "notes": "来自 OpenClaw 内置 skills 目录。",
+    "updatedAt": "2026-03-10"
+  },
+  {
+    "name": "coding-agent",
+    "slug": "coding-agent",
+    "status": "enabled",
+    "category": "Built-in Skill",
+    "purpose": "'Delegate coding tasks to Codex, Claude Code, or Pi agents via background process. Use when: (1) building/creating new features or apps, (2)",
+    "usage": "按 SKILL.md 指南通过自然语言触发，或进入该 skill 目录查看详细说明。",
+    "notes": "来自 OpenClaw 内置 skills 目录。",
+    "updatedAt": "2026-03-10"
+  },
+  {
+    "name": "discord",
+    "slug": "discord",
+    "status": "enabled",
+    "category": "Built-in Skill",
+    "purpose": "Discord ops via the message tool (channel=discord).",
+    "usage": "按 SKILL.md 指南通过自然语言触发，或进入该 skill 目录查看详细说明。",
+    "notes": "来自 OpenClaw 内置 skills 目录。",
+    "updatedAt": "2026-03-10"
+  },
+  {
+    "name": "eightctl",
+    "slug": "eightctl",
+    "status": "enabled",
+    "category": "Built-in Skill",
+    "purpose": "Control Eight Sleep pods (status, temperature, alarms, schedules).",
+    "usage": "按 SKILL.md 指南通过自然语言触发，或进入该 skill 目录查看详细说明。",
+    "notes": "来自 OpenClaw 内置 skills 目录。",
+    "updatedAt": "2026-03-10"
+  },
+  {
+    "name": "gemini",
+    "slug": "gemini",
+    "status": "enabled",
+    "category": "Built-in Skill",
+    "purpose": "Gemini CLI for one-shot Q&A, summaries, and generation.",
+    "usage": "按 SKILL.md 指南通过自然语言触发，或进入该 skill 目录查看详细说明。",
+    "notes": "来自 OpenClaw 内置 skills 目录。",
+    "updatedAt": "2026-03-10"
+  },
+  {
+    "name": "gh-issues",
+    "slug": "gh-issues",
+    "status": "enabled",
+    "category": "Built-in Skill",
+    "purpose": "Fetch GitHub issues, spawn sub-agents to implement fixes and open PRs, then monitor and address PR review comments. Usage: /gh-issues [owner",
+    "usage": "按 SKILL.md 指南通过自然语言触发，或进入该 skill 目录查看详细说明。",
+    "notes": "来自 OpenClaw 内置 skills 目录。",
+    "updatedAt": "2026-03-10"
+  },
+  {
+    "name": "gifgrep",
+    "slug": "gifgrep",
+    "status": "enabled",
+    "category": "Built-in Skill",
+    "purpose": "Search GIF providers with CLI/TUI, download results, and extract stills/sheets.",
+    "usage": "按 SKILL.md 指南通过自然语言触发，或进入该 skill 目录查看详细说明。",
+    "notes": "来自 OpenClaw 内置 skills 目录。",
+    "updatedAt": "2026-03-10"
+  },
+  {
+    "name": "github",
+    "slug": "github",
+    "status": "enabled",
+    "category": "Built-in Skill",
+    "purpose": "GitHub operations via gh CLI: issues, PRs, CI runs, code review, API queries. Use when: (1) checking PR status or CI, (2) creating/commentin",
+    "usage": "按 SKILL.md 指南通过自然语言触发，或进入该 skill 目录查看详细说明。",
+    "notes": "来自 OpenClaw 内置 skills 目录。",
+    "updatedAt": "2026-03-10"
+  },
+  {
+    "name": "gog",
+    "slug": "gog",
+    "status": "enabled",
+    "category": "Built-in Skill",
+    "purpose": "Google Workspace CLI for Gmail, Calendar, Drive, Contacts, Sheets, and Docs.",
+    "usage": "按 SKILL.md 指南通过自然语言触发，或进入该 skill 目录查看详细说明。",
+    "notes": "来自 OpenClaw 内置 skills 目录。",
+    "updatedAt": "2026-03-10"
+  },
+  {
+    "name": "goplaces",
+    "slug": "goplaces",
+    "status": "enabled",
+    "category": "Built-in Skill",
+    "purpose": "Query Google Places API (New) via the goplaces CLI for text search, place details, resolve, and reviews. Use for human-friendly place lookup",
+    "usage": "按 SKILL.md 指南通过自然语言触发，或进入该 skill 目录查看详细说明。",
+    "notes": "来自 OpenClaw 内置 skills 目录。",
+    "updatedAt": "2026-03-10"
+  },
+  {
+    "name": "healthcheck",
+    "slug": "healthcheck",
+    "status": "enabled",
+    "category": "Built-in Skill",
+    "purpose": "Host security hardening and risk-tolerance configuration for OpenClaw deployments. Use when a user asks for security audits, firewall/SSH/up",
+    "usage": "按 SKILL.md 指南通过自然语言触发，或进入该 skill 目录查看详细说明。",
+    "notes": "来自 OpenClaw 内置 skills 目录。",
+    "updatedAt": "2026-03-10"
+  },
+  {
+    "name": "himalaya",
+    "slug": "himalaya",
+    "status": "enabled",
+    "category": "Built-in Skill",
+    "purpose": "CLI to manage emails via IMAP/SMTP. Use himalaya to list, read, write, reply, forward, search, and organize emails from the terminal. Suppor",
+    "usage": "按 SKILL.md 指南通过自然语言触发，或进入该 skill 目录查看详细说明。",
+    "notes": "来自 OpenClaw 内置 skills 目录。",
+    "updatedAt": "2026-03-10"
+  },
+  {
+    "name": "imsg",
+    "slug": "imsg",
+    "status": "enabled",
+    "category": "Built-in Skill",
+    "purpose": "iMessage/SMS CLI for listing chats, history, and sending messages via Messages.app.",
+    "usage": "按 SKILL.md 指南通过自然语言触发，或进入该 skill 目录查看详细说明。",
+    "notes": "来自 OpenClaw 内置 skills 目录。",
+    "updatedAt": "2026-03-10"
+  },
+  {
+    "name": "mcporter",
+    "slug": "mcporter",
+    "status": "enabled",
+    "category": "Built-in Skill",
+    "purpose": "Use the mcporter CLI to list, configure, auth, and call MCP servers/tools directly (HTTP or stdio), including ad-hoc servers, config edits, ",
+    "usage": "按 SKILL.md 指南通过自然语言触发，或进入该 skill 目录查看详细说明。",
+    "notes": "来自 OpenClaw 内置 skills 目录。",
+    "updatedAt": "2026-03-10"
+  },
+  {
+    "name": "model-usage",
+    "slug": "model-usage",
+    "status": "enabled",
+    "category": "Built-in Skill",
+    "purpose": "Use CodexBar CLI local cost usage to summarize per-model usage for Codex or Claude, including the current (most recent) model or a full mode",
+    "usage": "按 SKILL.md 指南通过自然语言触发，或进入该 skill 目录查看详细说明。",
+    "notes": "来自 OpenClaw 内置 skills 目录。",
+    "updatedAt": "2026-03-10"
+  },
+  {
+    "name": "nano-banana-pro",
+    "slug": "nano-banana-pro",
+    "status": "enabled",
+    "category": "Built-in Skill",
+    "purpose": "Generate or edit images via Gemini 3 Pro Image (Nano Banana Pro).",
+    "usage": "按 SKILL.md 指南通过自然语言触发，或进入该 skill 目录查看详细说明。",
+    "notes": "来自 OpenClaw 内置 skills 目录。",
+    "updatedAt": "2026-03-10"
+  },
+  {
+    "name": "nano-pdf",
+    "slug": "nano-pdf",
+    "status": "enabled",
+    "category": "Built-in Skill",
+    "purpose": "Edit PDFs with natural-language instructions using the nano-pdf CLI.",
+    "usage": "按 SKILL.md 指南通过自然语言触发，或进入该 skill 目录查看详细说明。",
+    "notes": "来自 OpenClaw 内置 skills 目录。",
+    "updatedAt": "2026-03-10"
+  },
+  {
+    "name": "notion",
+    "slug": "notion",
+    "status": "enabled",
+    "category": "Built-in Skill",
+    "purpose": "Notion API for creating and managing pages, databases, and blocks.",
+    "usage": "按 SKILL.md 指南通过自然语言触发，或进入该 skill 目录查看详细说明。",
+    "notes": "来自 OpenClaw 内置 skills 目录。",
+    "updatedAt": "2026-03-10"
+  },
+  {
+    "name": "obsidian",
+    "slug": "obsidian",
+    "status": "enabled",
+    "category": "Built-in Skill",
+    "purpose": "Work with Obsidian vaults (plain Markdown notes) and automate via obsidian-cli.",
+    "usage": "按 SKILL.md 指南通过自然语言触发，或进入该 skill 目录查看详细说明。",
+    "notes": "来自 OpenClaw 内置 skills 目录。",
+    "updatedAt": "2026-03-10"
+  },
+  {
+    "name": "openai-image-gen",
+    "slug": "openai-image-gen",
+    "status": "enabled",
+    "category": "Built-in Skill",
+    "purpose": "Batch-generate images via OpenAI Images API. Random prompt sampler + index.html gallery.",
+    "usage": "按 SKILL.md 指南通过自然语言触发，或进入该 skill 目录查看详细说明。",
+    "notes": "来自 OpenClaw 内置 skills 目录。",
+    "updatedAt": "2026-03-10"
+  },
+  {
+    "name": "openai-whisper",
+    "slug": "openai-whisper",
+    "status": "enabled",
+    "category": "Built-in Skill",
+    "purpose": "Local speech-to-text with the Whisper CLI (no API key).",
+    "usage": "按 SKILL.md 指南通过自然语言触发，或进入该 skill 目录查看详细说明。",
+    "notes": "来自 OpenClaw 内置 skills 目录。",
+    "updatedAt": "2026-03-10"
+  },
+  {
+    "name": "openai-whisper-api",
+    "slug": "openai-whisper-api",
+    "status": "enabled",
+    "category": "Built-in Skill",
+    "purpose": "Transcribe audio via OpenAI Audio Transcriptions API (Whisper).",
+    "usage": "按 SKILL.md 指南通过自然语言触发，或进入该 skill 目录查看详细说明。",
+    "notes": "来自 OpenClaw 内置 skills 目录。",
+    "updatedAt": "2026-03-10"
+  },
+  {
+    "name": "openhue",
+    "slug": "openhue",
+    "status": "enabled",
+    "category": "Built-in Skill",
+    "purpose": "Control Philips Hue lights and scenes via the OpenHue CLI.",
+    "usage": "按 SKILL.md 指南通过自然语言触发，或进入该 skill 目录查看详细说明。",
+    "notes": "来自 OpenClaw 内置 skills 目录。",
+    "updatedAt": "2026-03-10"
+  },
+  {
+    "name": "oracle",
+    "slug": "oracle",
+    "status": "enabled",
+    "category": "Built-in Skill",
+    "purpose": "Best practices for using the oracle CLI (prompt + file bundling, engines, sessions, and file attachment patterns).",
+    "usage": "按 SKILL.md 指南通过自然语言触发，或进入该 skill 目录查看详细说明。",
+    "notes": "来自 OpenClaw 内置 skills 目录。",
+    "updatedAt": "2026-03-10"
+  },
+  {
+    "name": "ordercli",
+    "slug": "ordercli",
+    "status": "enabled",
+    "category": "Built-in Skill",
+    "purpose": "Foodora-only CLI for checking past orders and active order status (Deliveroo WIP).",
+    "usage": "按 SKILL.md 指南通过自然语言触发，或进入该 skill 目录查看详细说明。",
+    "notes": "来自 OpenClaw 内置 skills 目录。",
+    "updatedAt": "2026-03-10"
+  },
+  {
+    "name": "peekaboo",
+    "slug": "peekaboo",
+    "status": "enabled",
+    "category": "Built-in Skill",
+    "purpose": "Capture and automate macOS UI with the Peekaboo CLI.",
+    "usage": "按 SKILL.md 指南通过自然语言触发，或进入该 skill 目录查看详细说明。",
+    "notes": "来自 OpenClaw 内置 skills 目录。",
+    "updatedAt": "2026-03-10"
+  },
+  {
+    "name": "sag",
+    "slug": "sag",
+    "status": "enabled",
+    "category": "Built-in Skill",
+    "purpose": "ElevenLabs text-to-speech with mac-style say UX.",
+    "usage": "按 SKILL.md 指南通过自然语言触发，或进入该 skill 目录查看详细说明。",
+    "notes": "来自 OpenClaw 内置 skills 目录。",
+    "updatedAt": "2026-03-10"
+  },
+  {
+    "name": "session-logs",
+    "slug": "session-logs",
+    "status": "enabled",
+    "category": "Built-in Skill",
+    "purpose": "Search and analyze your own session logs (older/parent conversations) using jq.",
+    "usage": "按 SKILL.md 指南通过自然语言触发，或进入该 skill 目录查看详细说明。",
+    "notes": "来自 OpenClaw 内置 skills 目录。",
+    "updatedAt": "2026-03-10"
+  },
+  {
+    "name": "sherpa-onnx-tts",
+    "slug": "sherpa-onnx-tts",
+    "status": "enabled",
+    "category": "Built-in Skill",
+    "purpose": "Local text-to-speech via sherpa-onnx (offline, no cloud)",
+    "usage": "按 SKILL.md 指南通过自然语言触发，或进入该 skill 目录查看详细说明。",
+    "notes": "来自 OpenClaw 内置 skills 目录。",
+    "updatedAt": "2026-03-10"
+  },
+  {
+    "name": "slack",
+    "slug": "slack",
+    "status": "enabled",
+    "category": "Built-in Skill",
+    "purpose": "Use when you need to control Slack from OpenClaw via the slack tool, including reacting to messages or pinning/unpinning items in Slack chan",
+    "usage": "按 SKILL.md 指南通过自然语言触发，或进入该 skill 目录查看详细说明。",
+    "notes": "来自 OpenClaw 内置 skills 目录。",
+    "updatedAt": "2026-03-10"
+  },
+  {
+    "name": "songsee",
+    "slug": "songsee",
+    "status": "enabled",
+    "category": "Built-in Skill",
+    "purpose": "Generate spectrograms and feature-panel visualizations from audio with the songsee CLI.",
+    "usage": "按 SKILL.md 指南通过自然语言触发，或进入该 skill 目录查看详细说明。",
+    "notes": "来自 OpenClaw 内置 skills 目录。",
+    "updatedAt": "2026-03-10"
+  },
+  {
+    "name": "sonoscli",
+    "slug": "sonoscli",
+    "status": "enabled",
+    "category": "Built-in Skill",
+    "purpose": "Control Sonos speakers (discover/status/play/volume/group).",
+    "usage": "按 SKILL.md 指南通过自然语言触发，或进入该 skill 目录查看详细说明。",
+    "notes": "来自 OpenClaw 内置 skills 目录。",
+    "updatedAt": "2026-03-10"
+  },
+  {
+    "name": "spotify-player",
+    "slug": "spotify-player",
+    "status": "enabled",
+    "category": "Built-in Skill",
+    "purpose": "Terminal Spotify playback/search via spogo (preferred) or spotify_player.",
+    "usage": "按 SKILL.md 指南通过自然语言触发，或进入该 skill 目录查看详细说明。",
+    "notes": "来自 OpenClaw 内置 skills 目录。",
+    "updatedAt": "2026-03-10"
+  },
+  {
+    "name": "summarize",
+    "slug": "summarize",
+    "status": "enabled",
+    "category": "Built-in Skill",
+    "purpose": "Summarize or extract text/transcripts from URLs, podcasts, and local files (great fallback for “transcribe this YouTube/video”).",
+    "usage": "按 SKILL.md 指南通过自然语言触发，或进入该 skill 目录查看详细说明。",
+    "notes": "来自 OpenClaw 内置 skills 目录。",
+    "updatedAt": "2026-03-10"
+  },
+  {
+    "name": "things-mac",
+    "slug": "things-mac",
+    "status": "enabled",
+    "category": "Built-in Skill",
+    "purpose": "Manage Things 3 via the things CLI on macOS (add/update projects+todos via URL scheme; read/search/list from the local Things database). Use",
+    "usage": "按 SKILL.md 指南通过自然语言触发，或进入该 skill 目录查看详细说明。",
+    "notes": "来自 OpenClaw 内置 skills 目录。",
+    "updatedAt": "2026-03-10"
+  },
+  {
+    "name": "tmux",
+    "slug": "tmux",
+    "status": "enabled",
+    "category": "Built-in Skill",
+    "purpose": "Remote-control tmux sessions for interactive CLIs by sending keystrokes and scraping pane output.",
+    "usage": "按 SKILL.md 指南通过自然语言触发，或进入该 skill 目录查看详细说明。",
+    "notes": "来自 OpenClaw 内置 skills 目录。",
+    "updatedAt": "2026-03-10"
+  },
+  {
+    "name": "trello",
+    "slug": "trello",
+    "status": "enabled",
+    "category": "Built-in Skill",
+    "purpose": "Manage Trello boards, lists, and cards via the Trello REST API.",
+    "usage": "按 SKILL.md 指南通过自然语言触发，或进入该 skill 目录查看详细说明。",
+    "notes": "来自 OpenClaw 内置 skills 目录。",
+    "updatedAt": "2026-03-10"
+  },
+  {
+    "name": "video-frames",
+    "slug": "video-frames",
+    "status": "enabled",
+    "category": "Built-in Skill",
+    "purpose": "Extract frames or short clips from videos using ffmpeg.",
+    "usage": "按 SKILL.md 指南通过自然语言触发，或进入该 skill 目录查看详细说明。",
+    "notes": "来自 OpenClaw 内置 skills 目录。",
+    "updatedAt": "2026-03-10"
+  },
+  {
+    "name": "voice-call",
+    "slug": "voice-call",
+    "status": "enabled",
+    "category": "Built-in Skill",
+    "purpose": "Start voice calls via the OpenClaw voice-call plugin.",
+    "usage": "按 SKILL.md 指南通过自然语言触发，或进入该 skill 目录查看详细说明。",
+    "notes": "来自 OpenClaw 内置 skills 目录。",
+    "updatedAt": "2026-03-10"
+  },
+  {
+    "name": "wacli",
+    "slug": "wacli",
+    "status": "enabled",
+    "category": "Built-in Skill",
+    "purpose": "Send WhatsApp messages to other people or search/sync WhatsApp history via the wacli CLI (not for normal user chats).",
+    "usage": "按 SKILL.md 指南通过自然语言触发，或进入该 skill 目录查看详细说明。",
+    "notes": "来自 OpenClaw 内置 skills 目录。",
+    "updatedAt": "2026-03-10"
+  },
+  {
+    "name": "weather",
+    "slug": "weather",
+    "status": "enabled",
+    "category": "Built-in Skill",
+    "purpose": "Get current weather and forecasts via wttr.in or Open-Meteo. Use when: user asks about weather, temperature, or forecasts for any location. ",
+    "usage": "按 SKILL.md 指南通过自然语言触发，或进入该 skill 目录查看详细说明。",
+    "notes": "来自 OpenClaw 内置 skills 目录。",
+    "updatedAt": "2026-03-10"
+  },
+  {
+    "name": "xurl",
+    "slug": "xurl",
+    "status": "enabled",
+    "category": "Built-in Skill",
+    "purpose": "A CLI tool for making authenticated requests to the X (Twitter) API. Use this skill when you need to post tweets, reply, quote, search, read",
+    "usage": "按 SKILL.md 指南通过自然语言触发，或进入该 skill 目录查看详细说明。",
+    "notes": "来自 OpenClaw 内置 skills 目录。",
+    "updatedAt": "2026-03-10"
+  },
+  {
+    "name": "ai-news-aggregator",
+    "slug": "ai-news-aggregator",
     "status": "ready",
-    "category": "Yahoo Finance",
-    "purpose": "专业行情/估值/图表分析（股票、加密、外汇）。",
-    "usage": "uv run --script scripts/yf price AAPL\nuv run --script scripts/yf pro NVDA 6mo",
-    "notes": "依赖 uv，当前环境已可用。",
-    "updatedAt": "2026-02-14"
-  },
-  {
-    "name": "stock-analysis",
-    "slug": "stock-analysis",
-    "status": "ready",
-    "category": "Yahoo Finance",
-    "purpose": "综合股票分析与组合/热点扫描。",
-    "usage": "按 SKILL.md 指南通过自然语言触发。",
-    "notes": "已安装，建议配合 uv 使用。",
-    "updatedAt": "2026-02-14"
+    "category": "Custom Skill",
+    "purpose": "自动定时获取多个来源的AI相关新闻，去重后生成中文摘要并推送到指定飞书群。",
+    "usage": "按 SKILL.md 指南通过自然语言触发，或进入该 skill 目录查看详细说明。",
+    "notes": "来自 workspace/skills，自定义技能。",
+    "updatedAt": "2026-03-10"
   },
   {
     "name": "akshare-market-intel",
     "slug": "akshare-market-intel",
     "status": "ready",
-    "category": "CN/HK/US Macro",
-    "purpose": "聚合 A股/港股/美股/黄金/金融新闻（AkShare）。",
-    "usage": "python3 scripts/market_intel.py snapshot\npython3 scripts/market_intel.py a-share --limit 20\npython3 scripts/market_intel.py hk --limit 20",
-    "notes": "我新增的自定义 skill。",
-    "updatedAt": "2026-02-14"
+    "category": "Custom Skill",
+    "purpose": "使用 AkShare 聚合 A股/港股/美股/黄金及宏观金融数据，支持快照、行情与新闻。",
+    "usage": "按 SKILL.md 指南通过自然语言触发，或进入该 skill 目录查看详细说明。",
+    "notes": "来自 workspace/skills，自定义技能。",
+    "updatedAt": "2026-03-10"
   },
   {
-    "name": "volc-ark-multimodal",
-    "slug": "volc-ark-multimodal",
-    "status": "configured",
-    "category": "Multimodal",
-    "purpose": "支持图片生成、图生视频、图片理解与深度推理。",
-    "usage": "python3 scripts/ark_multimodal.py image --prompt \"赛博朋克城市夜景\"\npython3 scripts/ark_multimodal.py video-create --prompt \"...\" --image-url \"https://...\"\npython3 scripts/ark_multimodal.py reason --image-url \"https://...\" --text \"你看见了什么\"",
-    "notes": "已配置 ARK_BASE_URL / ARK_API_KEY / ARK_*_MODEL。",
-    "updatedAt": "2026-02-14"
+    "name": "amadeus-hotels",
+    "slug": "amadeus-hotels",
+    "status": "ready",
+    "category": "Custom Skill",
+    "purpose": "Search hotel prices and availability via Amadeus API. Find vacation hotels by city, coordinates, or amenities. Compare prices, view ratings,",
+    "usage": "按 SKILL.md 指南通过自然语言触发，或进入该 skill 目录查看详细说明。",
+    "notes": "来自 workspace/skills，自定义技能。",
+    "updatedAt": "2026-03-10"
+  },
+  {
+    "name": "aria2-json-rpc",
+    "slug": "aria2-json-rpc",
+    "status": "ready",
+    "category": "Custom Skill",
+    "purpose": "Interact with aria2 download manager via JSON-RPC 2.0. Manage downloads, query status, and control tasks through natural language commands. ",
+    "usage": "按 SKILL.md 指南通过自然语言触发，或进入该 skill 目录查看详细说明。",
+    "notes": "来自 workspace/skills，自定义技能。",
+    "updatedAt": "2026-03-10"
+  },
+  {
+    "name": "bird",
+    "slug": "bird",
+    "status": "ready",
+    "category": "Custom Skill",
+    "purpose": "X/Twitter CLI for reading, searching, and posting via cookies or Sweetistics.",
+    "usage": "按 SKILL.md 指南通过自然语言触发，或进入该 skill 目录查看详细说明。",
+    "notes": "来自 workspace/skills，自定义技能。",
+    "updatedAt": "2026-03-10"
+  },
+  {
+    "name": "browse",
+    "slug": "browse",
+    "status": "ready",
+    "category": "Custom Skill",
+    "purpose": "Complete guide for creating and deploying browser automation functions using the stagehand CLI",
+    "usage": "按 SKILL.md 指南通过自然语言触发，或进入该 skill 目录查看详细说明。",
+    "notes": "来自 workspace/skills，自定义技能。",
+    "updatedAt": "2026-03-10"
+  },
+  {
+    "name": "china-market-gateway",
+    "slug": "china-market-gateway",
+    "status": "ready",
+    "category": "Custom Skill",
+    "purpose": "**Name:** china-market-gateway",
+    "usage": "按 SKILL.md 指南通过自然语言触发，或进入该 skill 目录查看详细说明。",
+    "notes": "来自 workspace/skills，自定义技能。",
+    "updatedAt": "2026-03-10"
+  },
+  {
+    "name": "clawbridge",
+    "slug": "clawbridge",
+    "status": "ready",
+    "category": "Custom Skill",
+    "purpose": "<skill>",
+    "usage": "按 SKILL.md 指南通过自然语言触发，或进入该 skill 目录查看详细说明。",
+    "notes": "来自 workspace/skills，自定义技能。",
+    "updatedAt": "2026-03-10"
+  },
+  {
+    "name": "clawdbot-macos-build",
+    "slug": "clawdbot-macos-build",
+    "status": "ready",
+    "category": "Custom Skill",
+    "purpose": "Build the Clawdbot macOS menu bar app from source. Use when you need to install the Clawdbot.app companion (for menu bar status, permissions",
+    "usage": "按 SKILL.md 指南通过自然语言触发，或进入该 skill 目录查看详细说明。",
+    "notes": "来自 workspace/skills，自定义技能。",
+    "updatedAt": "2026-03-10"
+  },
+  {
+    "name": "crypto-gold-monitor",
+    "slug": "crypto-gold-monitor",
+    "status": "ready",
+    "category": "Custom Skill",
+    "purpose": "加密货币与贵金属价格监控 / Crypto & Precious Metals Price Monitor - 监控BTC/ETH实时价格、黄金(XAU)/白银(XAG)走势，免费API无需Key",
+    "usage": "按 SKILL.md 指南通过自然语言触发，或进入该 skill 目录查看详细说明。",
+    "notes": "来自 workspace/skills，自定义技能。",
+    "updatedAt": "2026-03-10"
   },
   {
     "name": "cursor-agent",
     "slug": "cursor-agent",
-    "status": "configured",
-    "category": "Coding Agent",
-    "purpose": "将 Cursor Agent CLI 作为编码子代理使用，用于写代码、重构、调试和方案生成。",
-    "usage": "cursor agent --plan --workspace \"/path/to/repo\" \"分析并给出改造计划\"\ncursor agent --print --workspace \"/path/to/repo\" \"实现 xxx 并补测试\"",
-    "notes": "已验证可登录使用（talisk@talisk.cn）。",
-    "updatedAt": "2026-02-14"
+    "status": "ready",
+    "category": "Custom Skill",
+    "purpose": "使用 Cursor Agent CLI 作为编码子代理（coding sub-agent）来执行写代码、重构、调试、生成文档、批量改动等任务。用户提到“用 cursor agent / 用 cursor 当 subagent / 让 cursor 写代码”时使用。",
+    "usage": "按 SKILL.md 指南通过自然语言触发，或进入该 skill 目录查看详细说明。",
+    "notes": "来自 workspace/skills，自定义技能。",
+    "updatedAt": "2026-03-10"
+  },
+  {
+    "name": "deepwiki",
+    "slug": "deepwiki",
+    "status": "ready",
+    "category": "Custom Skill",
+    "purpose": "Query the DeepWiki MCP server for GitHub repository documentation, wiki structure, and AI-powered questions.",
+    "usage": "按 SKILL.md 指南通过自然语言触发，或进入该 skill 目录查看详细说明。",
+    "notes": "来自 workspace/skills，自定义技能。",
+    "updatedAt": "2026-03-10"
+  },
+  {
+    "name": "finnhub",
+    "slug": "finnhub",
+    "status": "ready",
+    "category": "Custom Skill",
+    "purpose": "Access Finnhub API for real-time stock quotes, company news, market data, financial statements, and trading signals. Use when you need curre",
+    "usage": "按 SKILL.md 指南通过自然语言触发，或进入该 skill 目录查看详细说明。",
+    "notes": "来自 workspace/skills，自定义技能。",
+    "updatedAt": "2026-03-10"
+  },
+  {
+    "name": "finshare",
+    "slug": "finshare",
+    "status": "ready",
+    "category": "Custom Skill",
+    "purpose": "使用 finshare 获取 A 股/ETF/LOF 的历史 K 线与实时快照数据。适用于用户提到“finshare”“A股行情”“实时价格”“K线数据”“批量股票快照”或需要用 Python 快速抓取中国市场行情数据的场景。",
+    "usage": "按 SKILL.md 指南通过自然语言触发，或进入该 skill 目录查看详细说明。",
+    "notes": "来自 workspace/skills，自定义技能。",
+    "updatedAt": "2026-03-10"
+  },
+  {
+    "name": "git-helper",
+    "slug": "git-helper",
+    "status": "ready",
+    "category": "Custom Skill",
+    "purpose": "Common git operations as a skill (status, pull, push, branch, log)",
+    "usage": "按 SKILL.md 指南通过自然语言触发，或进入该 skill 目录查看详细说明。",
+    "notes": "来自 workspace/skills，自定义技能。",
+    "updatedAt": "2026-03-10"
+  },
+  {
+    "name": "git-summary",
+    "slug": "git-summary",
+    "status": "ready",
+    "category": "Custom Skill",
+    "purpose": "Get a quick summary of the current Git repository including status, recent commits, branches, and contributors.",
+    "usage": "按 SKILL.md 指南通过自然语言触发，或进入该 skill 目录查看详细说明。",
+    "notes": "来自 workspace/skills，自定义技能。",
+    "updatedAt": "2026-03-10"
+  },
+  {
+    "name": "git-workflows",
+    "slug": "git-workflows",
+    "status": "ready",
+    "category": "Custom Skill",
+    "purpose": "Advanced git operations beyond add/commit/push. Use when rebasing, bisecting bugs, using worktrees for parallel development, recovering with",
+    "usage": "按 SKILL.md 指南通过自然语言触发，或进入该 skill 目录查看详细说明。",
+    "notes": "来自 workspace/skills，自定义技能。",
+    "updatedAt": "2026-03-10"
+  },
+  {
+    "name": "gitclaw",
+    "slug": "gitclaw",
+    "status": "ready",
+    "category": "Custom Skill",
+    "purpose": "Back up the OpenClaw agent workspace to a GitHub repo and keep it synced via a cron-driven commit/push script.",
+    "usage": "按 SKILL.md 指南通过自然语言触发，或进入该 skill 目录查看详细说明。",
+    "notes": "来自 workspace/skills，自定义技能。",
+    "updatedAt": "2026-03-10"
+  },
+  {
+    "name": "github-pro",
+    "slug": "github-pro",
+    "status": "ready",
+    "category": "Custom Skill",
+    "purpose": "Advanced GitHub operations via gh CLI. CI/CD monitoring, API queries, and automated PR reviews.",
+    "usage": "按 SKILL.md 指南通过自然语言触发，或进入该 skill 目录查看详细说明。",
+    "notes": "来自 workspace/skills，自定义技能。",
+    "updatedAt": "2026-03-10"
+  },
+  {
+    "name": "gitload",
+    "slug": "gitload",
+    "status": "ready",
+    "category": "Custom Skill",
+    "purpose": ">",
+    "usage": "按 SKILL.md 指南通过自然语言触发，或进入该 skill 目录查看详细说明。",
+    "notes": "来自 workspace/skills，自定义技能。",
+    "updatedAt": "2026-03-10"
+  },
+  {
+    "name": "homebrew",
+    "slug": "homebrew",
+    "status": "ready",
+    "category": "Custom Skill",
+    "purpose": "Homebrew package manager for macOS. Search, install, manage, and troubleshoot packages and casks.",
+    "usage": "按 SKILL.md 指南通过自然语言触发，或进入该 skill 目录查看详细说明。",
+    "notes": "来自 workspace/skills，自定义技能。",
+    "updatedAt": "2026-03-10"
+  },
+  {
+    "name": "market-news-analyst",
+    "slug": "market-news-analyst",
+    "status": "ready",
+    "category": "Custom Skill",
+    "purpose": "This skill should be used when analyzing recent market-moving news events and their impact on equity markets and commodities. Use this skill",
+    "usage": "按 SKILL.md 指南通过自然语言触发，或进入该 skill 目录查看详细说明。",
+    "notes": "来自 workspace/skills，自定义技能。",
+    "updatedAt": "2026-03-10"
   },
   {
     "name": "moltbot-docker",
     "slug": "moltbot-docker",
-    "status": "enabled",
-    "category": "DevOps / Docker",
-    "purpose": "Moltbot 的 Docker 部署与运维相关能力。",
-    "usage": "按 SKILL.md 通过自然语言触发，或在 skills/moltbot-docker 查看命令示例。",
-    "notes": "已安装自 ClawHub。",
-    "updatedAt": "2026-02-14"
+    "status": "ready",
+    "category": "Custom Skill",
+    "purpose": "Enables the bot to manage Docker containers, images, and stacks.",
+    "usage": "按 SKILL.md 指南通过自然语言触发，或进入该 skill 目录查看详细说明。",
+    "notes": "来自 workspace/skills，自定义技能。",
+    "updatedAt": "2026-03-10"
+  },
+  {
+    "name": "news-aggregator",
+    "slug": "news-aggregator",
+    "status": "ready",
+    "category": "Custom Skill",
+    "purpose": "国内外社会、科技、军事新闻汇总。自动搜索、筛选、整理新闻要点。",
+    "usage": "按 SKILL.md 指南通过自然语言触发，或进入该 skill 目录查看详细说明。",
+    "notes": "来自 workspace/skills，自定义技能。",
+    "updatedAt": "2026-03-10"
+  },
+  {
+    "name": "openclaw-backup",
+    "slug": "openclaw-backup",
+    "status": "ready",
+    "category": "Custom Skill",
+    "purpose": "Backup and restore OpenClaw data. Use when user asks to create backups, set up automatic backup schedules, restore from backup, or manage ba",
+    "usage": "按 SKILL.md 指南通过自然语言触发，或进入该 skill 目录查看详细说明。",
+    "notes": "来自 workspace/skills，自定义技能。",
+    "updatedAt": "2026-03-10"
+  },
+  {
+    "name": "openfr-stock",
+    "slug": "openfr-stock",
+    "status": "ready",
+    "category": "Custom Skill",
+    "purpose": "基于 OpenFR 的 A 股/港股/基金/指数/宏观金融研究技能，支持单次查询、配置检查与样例运行",
+    "usage": "按 SKILL.md 指南通过自然语言触发，或进入该 skill 目录查看详细说明。",
+    "notes": "来自 workspace/skills，自定义技能。",
+    "updatedAt": "2026-03-10"
+  },
+  {
+    "name": "pe-evaluation-ingest",
+    "slug": "pe-evaluation-ingest",
+    "status": "ready",
+    "category": "Custom Skill",
+    "purpose": "使用 Trae Remote Web IDE 录入并提交 PE 评估任务：保存 markdown、解析 frontmatter、登记 evaluations.csv、创建 session 并记录 session 信息。收到新评估用例时使用。",
+    "usage": "按 SKILL.md 指南通过自然语言触发，或进入该 skill 目录查看详细说明。",
+    "notes": "来自 workspace/skills，自定义技能。",
+    "updatedAt": "2026-03-10"
+  },
+  {
+    "name": "pe-evaluation-query",
+    "slug": "pe-evaluation-query",
+    "status": "ready",
+    "category": "Custom Skill",
+    "purpose": "基于 evaluations.csv 单次查询 Trae session 状态并收集已完成结果与 PR：打开 session_url、读取 status-text、保存 turn__agent-message、记录 PR 链接。需要查看进度或收集结果时使用。",
+    "usage": "按 SKILL.md 指南通过自然语言触发，或进入该 skill 目录查看详细说明。",
+    "notes": "来自 workspace/skills，自定义技能。",
+    "updatedAt": "2026-03-10"
+  },
+  {
+    "name": "pr-reviewer",
+    "slug": "pr-reviewer",
+    "status": "ready",
+    "category": "Custom Skill",
+    "purpose": "Automated GitHub PR code review with diff analysis, lint integration, and structured reports. Use when reviewing pull requests, checking for",
+    "usage": "按 SKILL.md 指南通过自然语言触发，或进入该 skill 目录查看详细说明。",
+    "notes": "来自 workspace/skills，自定义技能。",
+    "updatedAt": "2026-03-10"
+  },
+  {
+    "name": "prompt-guard",
+    "slug": "prompt-guard",
+    "status": "ready",
+    "category": "Custom Skill",
+    "purpose": "Token-optimized prompt injection defense. 70% token reduction via tiered pattern loading, 90% reduction for repeated requests via hash cache",
+    "usage": "按 SKILL.md 指南通过自然语言触发，或进入该 skill 目录查看详细说明。",
+    "notes": "来自 workspace/skills，自定义技能。",
+    "updatedAt": "2026-03-10"
+  },
+  {
+    "name": "read-github",
+    "slug": "read-github",
+    "status": "ready",
+    "category": "Custom Skill",
+    "purpose": ">",
+    "usage": "按 SKILL.md 指南通过自然语言触发，或进入该 skill 目录查看详细说明。",
+    "notes": "来自 workspace/skills，自定义技能。",
+    "updatedAt": "2026-03-10"
+  },
+  {
+    "name": "shortcuts-skill",
+    "slug": "shortcuts-skill",
+    "status": "ready",
+    "category": "Custom Skill",
+    "purpose": "Generate macOS/iOS Shortcuts by creating plist files. Use when asked to create shortcuts, automate workflows, build .shortcut files, or gene",
+    "usage": "按 SKILL.md 指南通过自然语言触发，或进入该 skill 目录查看详细说明。",
+    "notes": "来自 workspace/skills，自定义技能。",
+    "updatedAt": "2026-03-10"
+  },
+  {
+    "name": "skill-creator",
+    "slug": "skill-creator",
+    "status": "ready",
+    "category": "Custom Skill",
+    "purpose": "Guide for creating effective skills. This skill should be used when users want to create a new skill (or update an existing skill) that exte",
+    "usage": "按 SKILL.md 指南通过自然语言触发，或进入该 skill 目录查看详细说明。",
+    "notes": "来自 workspace/skills，自定义技能。",
+    "updatedAt": "2026-03-10"
+  },
+  {
+    "name": "skill-vetting",
+    "slug": "skill-vetting",
+    "status": "ready",
+    "category": "Custom Skill",
+    "purpose": "Vet ClawHub skills for security and utility before installation. Use when considering installing a ClawHub skill, evaluating third-party cod",
+    "usage": "按 SKILL.md 指南通过自然语言触发，或进入该 skill 目录查看详细说明。",
+    "notes": "来自 workspace/skills，自定义技能。",
+    "updatedAt": "2026-03-10"
+  },
+  {
+    "name": "skiplagged-flights",
+    "slug": "skiplagged-flights",
+    "status": "ready",
+    "category": "Custom Skill",
+    "purpose": "Search cheapest flights via Skiplagged MCP. Use for flight deals, price comparison, flexible dates, and destination discovery.",
+    "usage": "按 SKILL.md 指南通过自然语言触发，或进入该 skill 目录查看详细说明。",
+    "notes": "来自 workspace/skills，自定义技能。",
+    "updatedAt": "2026-03-10"
+  },
+  {
+    "name": "stock-analysis",
+    "slug": "stock-analysis",
+    "status": "ready",
+    "category": "Custom Skill",
+    "purpose": "Analyze stocks and cryptocurrencies using Yahoo Finance data. Supports portfolio management, watchlists with alerts, dividend analysis, 8-di",
+    "usage": "按 SKILL.md 指南通过自然语言触发，或进入该 skill 目录查看详细说明。",
+    "notes": "来自 workspace/skills，自定义技能。",
+    "updatedAt": "2026-03-10"
+  },
+  {
+    "name": "stock-market-pro",
+    "slug": "stock-market-pro",
+    "status": "ready",
+    "category": "Custom Skill",
+    "purpose": "Professional stock price tracking, fundamental analysis, and financial reporting tool. Supports global markets (US, KR, etc.), Crypto, and F",
+    "usage": "按 SKILL.md 指南通过自然语言触发，或进入该 skill 目录查看详细说明。",
+    "notes": "来自 workspace/skills，自定义技能。",
+    "updatedAt": "2026-03-10"
+  },
+  {
+    "name": "task-status",
+    "slug": "task-status",
+    "status": "ready",
+    "category": "Custom Skill",
+    "purpose": "Send short status descriptions in chat for long-running tasks. Use when you need to provide periodic updates during multi-step operations, c",
+    "usage": "按 SKILL.md 指南通过自然语言触发，或进入该 skill 目录查看详细说明。",
+    "notes": "来自 workspace/skills，自定义技能。",
+    "updatedAt": "2026-03-10"
+  },
+  {
+    "name": "traecli-agent",
+    "slug": "traecli-agent",
+    "status": "ready",
+    "category": "Custom Skill",
+    "purpose": "使用 TraeCLI（traecli/coco）作为编码子代理执行写代码、重构、调试、批量改动、问答分析等任务。用户提到“用 traecli / 用 coco / 用 trae agent / 用 trae 当 subagent”时使用。",
+    "usage": "按 SKILL.md 指南通过自然语言触发，或进入该 skill 目录查看详细说明。",
+    "notes": "来自 workspace/skills，自定义技能。",
+    "updatedAt": "2026-03-10"
+  },
+  {
+    "name": "travel-manager",
+    "slug": "travel-manager",
+    "status": "ready",
+    "category": "Custom Skill",
+    "purpose": "Comprehensive travel planning, booking, and management skill. Use when needing to plan international trips, manage multi-destination itinera",
+    "usage": "按 SKILL.md 指南通过自然语言触发，或进入该 skill 目录查看详细说明。",
+    "notes": "来自 workspace/skills，自定义技能。",
+    "updatedAt": "2026-03-10"
+  },
+  {
+    "name": "trend-watcher",
+    "slug": "trend-watcher",
+    "status": "ready",
+    "category": "Custom Skill",
+    "purpose": "Monitors GitHub Trending and tech communities for emerging tools and technologies.",
+    "usage": "按 SKILL.md 指南通过自然语言触发，或进入该 skill 目录查看详细说明。",
+    "notes": "来自 workspace/skills，自定义技能。",
+    "updatedAt": "2026-03-10"
+  },
+  {
+    "name": "uitars-bridge",
+    "slug": "uitars-bridge",
+    "status": "ready",
+    "category": "Custom Skill",
+    "purpose": "Bridge OpenClaw with UI-TARS / Agent TARS for desktop control workflows. Use when the user wants an OpenClaw-driven desktop agent architectu",
+    "usage": "按 SKILL.md 指南通过自然语言触发，或进入该 skill 目录查看详细说明。",
+    "notes": "来自 workspace/skills，自定义技能。",
+    "updatedAt": "2026-03-10"
+  },
+  {
+    "name": "us-stock-analysis",
+    "slug": "us-stock-analysis",
+    "status": "ready",
+    "category": "Custom Skill",
+    "purpose": "Comprehensive US stock analysis including fundamental analysis (financial metrics, business quality, valuation), technical analysis (indicat",
+    "usage": "按 SKILL.md 指南通过自然语言触发，或进入该 skill 目录查看详细说明。",
+    "notes": "来自 workspace/skills，自定义技能。",
+    "updatedAt": "2026-03-10"
   },
   {
     "name": "vercel",
     "slug": "vercel",
-    "status": "enabled",
-    "category": "Deploy / Vercel",
-    "purpose": "Vercel 项目部署与平台操作能力。",
-    "usage": "按 SKILL.md 通过自然语言触发，或在 skills/vercel 查看命令示例。",
-    "notes": "已安装自 ClawHub。",
-    "updatedAt": "2026-02-14"
+    "status": "ready",
+    "category": "Custom Skill",
+    "purpose": "Deploy applications and manage projects with complete CLI reference. Commands for deployments, projects, domains, environment variables, and",
+    "usage": "按 SKILL.md 指南通过自然语言触发，或进入该 skill 目录查看详细说明。",
+    "notes": "来自 workspace/skills，自定义技能。",
+    "updatedAt": "2026-03-10"
+  },
+  {
+    "name": "volc-ark-multimodal",
+    "slug": "volc-ark-multimodal",
+    "status": "ready",
+    "category": "Custom Skill",
+    "purpose": "使用火山引擎 Ark 多模接口进行图片生成、图生视频任务创建/查询、以及图片理解与深度推理。用户提到“生成图片/生成视频/图片理解”时使用。",
+    "usage": "按 SKILL.md 指南通过自然语言触发，或进入该 skill 目录查看详细说明。",
+    "notes": "来自 workspace/skills，自定义技能。",
+    "updatedAt": "2026-03-10"
+  },
+  {
+    "name": "feishu-doc",
+    "slug": "feishu-doc",
+    "status": "configured",
+    "category": "Extension Skill",
+    "purpose": "|",
+    "usage": "按 SKILL.md 指南通过自然语言触发，或进入该 skill 目录查看详细说明。",
+    "notes": "来自扩展目录，已接入当前 OpenClaw 环境。",
+    "updatedAt": "2026-03-10"
+  },
+  {
+    "name": "feishu-drive",
+    "slug": "feishu-drive",
+    "status": "configured",
+    "category": "Extension Skill",
+    "purpose": "|",
+    "usage": "按 SKILL.md 指南通过自然语言触发，或进入该 skill 目录查看详细说明。",
+    "notes": "来自扩展目录，已接入当前 OpenClaw 环境。",
+    "updatedAt": "2026-03-10"
+  },
+  {
+    "name": "feishu-perm",
+    "slug": "feishu-perm",
+    "status": "configured",
+    "category": "Extension Skill",
+    "purpose": "|",
+    "usage": "按 SKILL.md 指南通过自然语言触发，或进入该 skill 目录查看详细说明。",
+    "notes": "来自扩展目录，已接入当前 OpenClaw 环境。",
+    "updatedAt": "2026-03-10"
+  },
+  {
+    "name": "feishu-wiki",
+    "slug": "feishu-wiki",
+    "status": "configured",
+    "category": "Extension Skill",
+    "purpose": "|",
+    "usage": "按 SKILL.md 指南通过自然语言触发，或进入该 skill 目录查看详细说明。",
+    "notes": "来自扩展目录，已接入当前 OpenClaw 环境。",
+    "updatedAt": "2026-03-10"
   }
 ]
